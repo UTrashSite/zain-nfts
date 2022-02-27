@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:site_name" content="OpenSea" />
+    <meta property="og:title" content="Zain Raza NFT Collection" />
+    <meta property="og:description" content="Limited Edition Zain Raza NFT Collection, Buy Now!" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Zain NFTs</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue@3"></script>
+<div id="app" style="width: 100%;">
+    <div class="container align-items-center justify-content-center" style="width: 100%;">
+        <br><br>
+        <h1>Zain Raza Limited Edition NFT Collection</h1>
+        <br><br>
+        <h3>Browse our collection:</h3>
+        <div class="row">
+            <div class="col-3" v-for="zain in zains">
+                <div class="card">
+                    <img class="card-img-top" :src=zain.url alt="" />
+                    <div class="card-body">
+                        <h5 class="card-title">${{ zain.price }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Zain {{ zain.title }}</h6>
+                        <a href="https://yournewsnet.xyz/rickrolled" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<style>
+    .h1{
+        font-weight: 300;
+        font-size: 2.3rem;
+    }
+    .card{
+        margin: 15px;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        message: 'Hello Vue!',
+        zains: [
+        {
+                title:"Default",
+                url:'zains/Slide1.png',
+                price:10000,
+            },
+            {
+                title:"White",
+                url:'zains/Slide2.png',
+                price:800
+            },
+            {
+                title:"Dark Red",
+                url:'zains/Slide3.png',
+                price:1300
+            },
+            {
+                title:"Red",
+                url:'zains/Slide4.png',
+                price:500
+            },
+            {
+                title:"Orange",
+                url:'zains/Slide5.png',
+                price:850
+            },
+            {
+                title:"Yellow",
+                url:'zains/Slide6.png',
+                price:1200
+            },
+            {
+                title:"Green",
+                url:'zains/Slide7.png',
+                price:300
+            },
+            {
+                title:"Sky Blue",
+                url:'zains/Slide8.png',
+                price:650
+            },
+            {
+                title:"Blue",
+                url:'zains/Slide9.png',
+                price:8000
+            },
+            {
+                title:"Dark Blue",
+                url:'zains/Slide10.png',
+                price:250
+            },
+            {
+                title:"Purple",
+                url:'zains/Slide11.png',
+                price:900
+            },
+            {
+                title:"Pink",
+                url:'zains/Slide12.png',
+                price:1800
+            },
+        ]
+      }
+    }
+  }).mount('#app')
+</script>
+</body>
+</html>
